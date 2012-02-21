@@ -1,0 +1,12 @@
+---
+name: "squeak"
+runtimes:
+  - "cog":
+      version: "4.0"
+      description: "CogVM"
+      executable: <%= File.expand_path("~/smalltalk/cog/bin/squeak") %>
+      default: true
+      environment:
+detection:
+  - "squeak.st"
+

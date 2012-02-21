@@ -92,3 +92,11 @@ runtimes:
     version_flag: '-vn'
     environment:
 <% end %>
+<% if node[:dea][:runtimes].include?("cog") %>
+  cog:
+    executable: <%= File.expand_path("~/smalltalk/cog/bin/squeak") %>
+    version: 4.0
+    version_flag: '-version'
+    environment:
+<% end %>
+

@@ -1,0 +1,12 @@
+---
+name: "squeak"
+runtimes:
+  - cog:
+      version: '4.0'
+      description: 'CogVM for Smalltalk'
+      executable: /home/vcap/smalltalk/cog/bin/squeak # FIXME: match install
+      default: true
+app_servers:
+detection:
+  - "squeak.st": '.'
+staged_services:
