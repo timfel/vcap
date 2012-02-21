@@ -9,13 +9,13 @@
 case node['platform']
 when "ubuntu"
   package "nginx"
-  template "nginx.conf" do
-    path File.join(node[:nginx][:dir], "nginx.conf")
-    source "ubuntu-nginx.conf.erb"
-    owner "root"
-    group "root"
-    mode 0644
-  end
+  # template "nginx.conf" do
+  #   path File.join(node[:nginx][:dir], "nginx.conf")
+  #   source "ubuntu-nginx.conf.erb"
+  #   owner "root"
+  #   group "root"
+  #   mode 0644
+  # end
 
   service "nginx" do
     supports :status => true, :restart => true, :reload => true
